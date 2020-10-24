@@ -14,7 +14,7 @@ class App extends Component {
 
         return (
             <div>
-                <Layout>
+                <Layout isAuthenticated={this.state.isUserAuthenticated}>
                     {isUserAuth}
                 </Layout>
             </div>

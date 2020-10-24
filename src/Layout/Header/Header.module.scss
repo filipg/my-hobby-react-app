@@ -1,9 +1,14 @@
 .Nav {
   display: flex; // to mixin
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   background: #bbdefb; // to global styles
   height: 80px;
+
+  span {
+    font-size: 24px;
+    cursor: pointer;
+  }
 
   ul {
     list-style-type: none;
