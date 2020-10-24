@@ -6,7 +6,7 @@ import Footer from './Footer/Footer';
 const layout = props => (
     <Aux>
         <header>
-            <Header isAuthenticated={props.isAuthenticated}/>
+            <Header isAuthenticated={props.isAuthenticated} displayLogin={(condition) => props.displayLogin(condition)}/>
         </header>
         <main>
             {props.children}

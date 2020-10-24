@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
 import './App.scss';
 import Layout from './Layout/Layout';
+import Auth from './Auth/Auth';
 
 class App extends Component {
 
     state = {
-        isUserAuthenticated: false
+        isUserAuthenticated: false,
+        displayLoginPage: true
     }
 
-    render() {
+    checkDisplayLogin = value => this.setState({displayLoginPage: value})
 
-        const isUserAuth = this.state.isUserAuthenticated ? <h1>User is authenticated</h1> : <h1>User in not authenticated</h1>;
+    render() {
+        const isUserAuth = this.state.isUserAuthenticated ? <h1>User is authenticated</h1> : <Auth displayLoginPage={this.state.displayLoginPage}/>
 
         return (
             <div>
-                <Layout isAuthenticated={this.state.isUserAuthenticated}>
+                <Layout isAuthenticated={this.state.isUserAuthenticated} displayLogin={(condition) => this.checkDisplayLogin(condition)}>
                     {isUserAuth}
                 </Layout>
             </div>

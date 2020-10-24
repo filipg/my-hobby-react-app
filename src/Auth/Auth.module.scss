@@ -1,0 +1,25 @@
+.Form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+
+  label {
+    padding: 20px;
+
+    input {
+      margin: 0 20px;
+    }
+  }
+
+  .Button {
+    width: 200px;
+    padding: 20px;
+    text-decoration: none;
+    outline: none;
+    border-radius: 10px;
+    background: #bbdefb;
+    cursor: pointer;
+  }
+}

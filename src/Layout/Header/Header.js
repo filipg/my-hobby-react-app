@@ -15,8 +15,8 @@ const header = (props) => {
     } else {
         headerContent = (
             <ul>
-                <li><a>Login</a></li>
-                <li><a>Register</a></li>
+                <li><a onClick={() => props.displayLogin(true)}>Login</a></li>
+                <li><a onClick={() => props.displayLogin(false)}>Register</a></li>
             </ul>
         )
     }
