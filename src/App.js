@@ -1,11 +1,25 @@
+import React, { Component } from 'react';
 import './App.scss';
+import Layout from './Layout/Layout';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>My React App</h1>
-    </div>
-  );
+class App extends Component {
+
+    state = {
+        isUserAuthenticated: false
+    }
+
+    render() {
+
+        const isUserAuth = this.state.isUserAuthenticated ? <h1>User is authenticated</h1> : <h1>User in not authenticated</h1>;
+
+        return (
+            <div>
+                <Layout>
+                    {isUserAuth}
+                </Layout>
+            </div>
+        );
+    }
 }
 
 export default App;
