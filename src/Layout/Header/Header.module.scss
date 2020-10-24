@@ -1,0 +1,29 @@
+.Nav {
+  display: flex; // to mixin
+  justify-content: flex-end;
+  align-items: center;
+  background: #bbdefb; // to global styles
+  height: 80px;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      padding: 15px 20px;
+
+      a {
+        cursor: pointer;
+        font-size: 18px;
+
+        &:hover {
+          border-bottom: 3px solid #8aacc8;
+        }
+      }
+    }
+  }
+}
